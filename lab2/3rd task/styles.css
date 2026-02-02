@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(246, 248, 250);
+    color: rgb(31, 35, 40);
+    padding: 50px 20px;
+}
+
+.top {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.top h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.top p {
+    color: rgb(99, 108, 118);
+    margin-bottom: 25px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.box {
+    flex: 1;
+    background: white;
+    border: 1px solid rgb(208, 215, 222);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blue-border {
+    border: 2px solid rgb(9, 105, 218);
+    position: relative;
+}
+
+.tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(9, 105, 218);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    padding: 4px;
+    border-radius: 8px 8px 0 0;
+}
+
+h2 { 
+  margin-bottom: 5px; 
+}
+
+.info {
+    font-size: 14px;
+    color: rgb(99, 108, 118);
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.price p {
+    font-size: 13px;
+    color: rgb(99, 108, 118);
+    margin-bottom: 20px;
+}
+
+button {
+    height: 40px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sign-btn {
+    background-color: rgb(31, 35, 40);
+    height: 40px;
+    width: 35%;
+    color: white;
+    border: none;
+}
+
+.black-btn {
+    background-color: rgb(31, 35, 40);
+    color: white;
+    border: none;
+}
+
+.white-btn {
+    background-color: white;
+    border: 1px solid rgb(208, 215, 222);
+    color: rgb(31, 35, 40);
+}
+
+.split {
+    display: flex;
+    gap: 10px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "› ";
+    color: rgb(99, 108, 118);
+    font-weight: bold;
+}
+
+/* i really forgor to make a nav bar */
+.nav {
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: white;
+    border-bottom: 1px solid rgb(208, 215, 222);
+    z-index: 1000;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-logo {
+    height: 32px;
+    margin-right: 8px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(31, 35, 40);
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: rgb(99, 108, 118);
+}
+
+.search-box input {
+    background-color: rgb(246, 248, 250);
+    border: 1px solid rgb(208, 215, 222);
+    border-radius: 6px;
+    padding: 5px 12px;
+    width: 240px;
+    height: 30px;
+    font-size: 12px;
+}
+
+.sign-up {
+    border: 1px solid rgb(208, 215, 222);
+    background: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    height: 32px;
+    width: auto;
+    margin-bottom: 0;
+}
+
+.sign-up:hover {
+    background-color: rgb(246, 248, 250);
+}
