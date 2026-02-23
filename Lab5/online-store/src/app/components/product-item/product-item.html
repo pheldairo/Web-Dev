@@ -1,0 +1,36 @@
+<article class="card">
+  <button class="imageBtn" type="button" (click)="openKaspi()" title="Открыть на Kaspi">
+    <img class="mainImage" [src]="mainImage" [alt]="product.name" loading="lazy" />
+  </button>
+
+  <div class="thumbs" aria-label="Галерея">
+    @for (img of product.images; track $index) {
+      <button type="button" class="thumbBtn" (click)="selectImage($index)">
+        <img class="thumb" [src]="img" [alt]="product.name + ' фото'" loading="lazy" />
+      </button>
+    }
+  </div>
+
+  <div class="content">
+    <a class="name" [href]="product.link" target="_blank" rel="noopener noreferrer">
+      {{ product.name }}
+    </a>
+
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="meta">
+      <div class="price">{{ formatKzt(product.price) }}</div>
+
+      <div class="rating">
+        <span class="badge">{{ product.rating.toFixed(1) }}</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="button" class="btn" (click)="like()">Like</button>
+      <button type="button" class="btn" (click)="shareWhatsApp()">WhatsApp</button>
+      <button type="button" class="btn" (click)="shareTelegram()">Telegram</button>
+      <button type="button" class="btn danger" (click)="requestDelete()">Delete</button>
+    </div>
+  </div>
+</article>

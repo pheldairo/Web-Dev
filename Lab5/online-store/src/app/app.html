@@ -1,0 +1,32 @@
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebarTitle">Categories</div>
+
+    <div class="catList">
+      @for (c of categories; track c.id) {
+        <button
+          type="button"
+          class="catBtn"
+          [class.active]="c.id === selectedCategoryId"
+          (click)="selectCategory(c.id)"
+        >
+          {{ c.name }}
+        </button>
+      }
+    </div>
+  </aside>
+
+  <main class="content">
+    @if (selectedCategoryId === null) {
+      <div class="welcome">
+        <h1>Kaspi Магазин</h1>
+        <p>Справа категории - выбирай.</p>
+      </div>
+    } @else {
+      <app-product-list
+        [products]="selectedProducts"
+        (deleteProduct)="handleDelete($event)"
+      />
+    }
+  </main>
+</div>
