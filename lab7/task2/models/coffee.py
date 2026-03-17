@@ -1,3 +1,5 @@
+from .drink import Drink
+
 class Coffee(Drink):
     def __init__(self, name, volume_ml, price, caffeine_mg):
         super().__init__(name, volume_ml, price)
