@@ -7,7 +7,7 @@ class Drink:
     def drink(self):
         return f"You drink the {self.name}."
 
-    def get_price(self):
+    def getPrice(self):
         return f"The price is ${self.price}"
 
     def __str__(self):

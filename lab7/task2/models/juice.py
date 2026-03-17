@@ -8,5 +8,5 @@ class Juice(Drink):
     def drink(self):
         return f"You drink the refreshing {self.fruit_type} juice!"
 
-    def fruit_info(self):
+    def fruitInfo(self):
         return f"This juice is made from {self.fruit_type}"

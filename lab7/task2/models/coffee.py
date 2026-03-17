@@ -8,5 +8,5 @@ class Coffee(Drink):
     def drink(self):
         return f"You enjoy the strong {self.name}!"
 
-    def caffeine_info(self):
+    def caffeineInfo(self):
         return f"Caffeine: {self.caffeine_mg} mg"

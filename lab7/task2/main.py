@@ -8,9 +8,9 @@ drinks = [drink1, drink2, drink3]
 for drink in drinks:
     print(drink)              
     print(drink.drink())      
-    print(drink.get_price())
+    print(drink.getPrice())
     print()
 
     
-print(drink2.caffeine_info())
-print(drink3.fruit_info())
+print(drink2.caffeineInfo())
+print(drink3.fruitInfo())
