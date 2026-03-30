@@ -1,0 +1,30 @@
+[
+  {"model": "api.category", "pk": 1, "fields": {"name": "Electronics", "description": "Gadgets, devices, and electronic accessories"}},
+  {"model": "api.category", "pk": 2, "fields": {"name": "Clothing", "description": "Men's and women's apparel and accessories"}},
+  {"model": "api.category", "pk": 3, "fields": {"name": "Books", "description": "Fiction, non-fiction, textbooks and more"}},
+  {"model": "api.category", "pk": 4, "fields": {"name": "Home & Kitchen", "description": "Furniture, appliances, and home essentials"}},
+
+  {"model": "api.product", "pk": 1,  "fields": {"name": "Wireless Headphones",  "description": "Noise-cancelling over-ear headphones", "price": "89.99",  "stock": 50, "category": 1}},
+  {"model": "api.product", "pk": 2,  "fields": {"name": "Mechanical Keyboard",  "description": "TKL mechanical keyboard with RGB lighting", "price": "74.99",  "stock": 30, "category": 1}},
+  {"model": "api.product", "pk": 3,  "fields": {"name": "USB-C Hub",            "description": "7-in-1 multiport USB-C adapter", "price": "34.99",  "stock": 80, "category": 1}},
+  {"model": "api.product", "pk": 4,  "fields": {"name": "Portable SSD",         "description": "1TB external solid-state drive, USB 3.2", "price": "109.99", "stock": 40, "category": 1}},
+  {"model": "api.product", "pk": 5,  "fields": {"name": "Webcam 1080p",         "description": "Full-HD webcam with built-in microphone", "price": "49.99",  "stock": 60, "category": 1}},
+
+  {"model": "api.product", "pk": 6,  "fields": {"name": "Classic White T-Shirt","description": "100% cotton unisex crew-neck tee", "price": "14.99",  "stock": 200, "category": 2}},
+  {"model": "api.product", "pk": 7,  "fields": {"name": "Slim Fit Jeans",       "description": "Stretch denim slim-fit trousers", "price": "49.99",  "stock": 120, "category": 2}},
+  {"model": "api.product", "pk": 8,  "fields": {"name": "Hooded Sweatshirt",    "description": "Fleece-lined pullover hoodie", "price": "39.99",  "stock": 90,  "category": 2}},
+  {"model": "api.product", "pk": 9,  "fields": {"name": "Running Sneakers",     "description": "Lightweight mesh training shoes", "price": "64.99",  "stock": 75,  "category": 2}},
+  {"model": "api.product", "pk": 10, "fields": {"name": "Winter Jacket",        "description": "Water-resistant insulated parka", "price": "129.99", "stock": 45,  "category": 2}},
+
+  {"model": "api.product", "pk": 11, "fields": {"name": "Clean Code",           "description": "A handbook of agile software craftsmanship by Robert C. Martin", "price": "29.99",  "stock": 60, "category": 3}},
+  {"model": "api.product", "pk": 12, "fields": {"name": "The Pragmatic Programmer", "description": "Your journey to mastery by Hunt & Thomas", "price": "34.99",  "stock": 55, "category": 3}},
+  {"model": "api.product", "pk": 13, "fields": {"name": "Django for Beginners", "description": "Build websites with Python and Django", "price": "24.99",  "stock": 70, "category": 3}},
+  {"model": "api.product", "pk": 14, "fields": {"name": "Atomic Habits",        "description": "An easy and proven way to build good habits", "price": "16.99",  "stock": 100, "category": 3}},
+  {"model": "api.product", "pk": 15, "fields": {"name": "Dune",                 "description": "Epic science-fiction novel by Frank Herbert", "price": "12.99",  "stock": 85,  "category": 3}},
+
+  {"model": "api.product", "pk": 16, "fields": {"name": "Coffee Maker",         "description": "12-cup programmable drip coffee maker", "price": "59.99",  "stock": 35, "category": 4}},
+  {"model": "api.product", "pk": 17, "fields": {"name": "Non-Stick Frying Pan", "description": "28 cm ceramic-coated frying pan", "price": "27.99",  "stock": 50, "category": 4}},
+  {"model": "api.product", "pk": 18, "fields": {"name": "Desk Lamp",            "description": "LED adjustable desk lamp with USB charging", "price": "22.99",  "stock": 65, "category": 4}},
+  {"model": "api.product", "pk": 19, "fields": {"name": "Air Purifier",         "description": "HEPA H13 air purifier for rooms up to 30m²", "price": "89.99",  "stock": 28, "category": 4}},
+  {"model": "api.product", "pk": 20, "fields": {"name": "Bamboo Cutting Board", "description": "Extra-large organic bamboo chopping board", "price": "18.99",  "stock": 90, "category": 4}}
+]
