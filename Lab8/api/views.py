@@ -29,7 +29,6 @@ def category_to_dict(category):
 
 @require_GET
 def product_list(request):
-    """GET /api/products/ — list all products."""
     products = Product.objects.select_related('category').all()
     data = [product_to_dict(p) for p in products]
     return JsonResponse(data, safe=False)
@@ -37,7 +36,6 @@ def product_list(request):
 
 @require_GET
 def product_detail(request, id):
-    """GET /api/products/<id>/ — get one product by ID."""
     try:
         product = Product.objects.select_related('category').get(pk=id)
     except Product.DoesNotExist:
@@ -47,7 +45,6 @@ def product_detail(request, id):
 
 @require_GET
 def category_list(request):
-    """GET /api/categories/ — list all categories."""
     categories = Category.objects.all()
     data = [category_to_dict(c) for c in categories]
     return JsonResponse(data, safe=False)
@@ -55,7 +52,6 @@ def category_list(request):
 
 @require_GET
 def category_detail(request, id):
-    """GET /api/categories/<id>/ — get one category by ID."""
     try:
         category = Category.objects.get(pk=id)
     except Category.DoesNotExist:
@@ -65,7 +61,6 @@ def category_detail(request, id):
 
 @require_GET
 def category_products(request, id):
-    """GET /api/categories/<id>/products/ — list products by category."""
     try:
         category = Category.objects.get(pk=id)
     except Category.DoesNotExist:
