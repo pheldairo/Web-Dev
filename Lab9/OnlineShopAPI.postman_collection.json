@@ -2,16 +2,9 @@
   "info": {
     "name": "Online Shop API",
     "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "description": "Lab 9 — Django REST Framework API for Online Shop",
+    "description": "API collection for the Online Shop DRF project (Lab 9)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
-  "variable": [
-    {
-      "key": "base_url",
-      "value": "http://127.0.0.1:8000",
-      "type": "string"
-    }
-  ],
   "item": [
     {
       "name": "Categories",
@@ -20,100 +13,46 @@
           "name": "Get All Categories",
           "request": {
             "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/categories/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "categories", ""]
-            }
+            "url": { "raw": "http://localhost:8000/api/categories/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "categories", ""] }
           }
         },
         {
           "name": "Get Category by ID",
           "request": {
             "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/categories/1/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "categories", "1", ""]
-            }
+            "url": { "raw": "http://localhost:8000/api/categories/1/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "categories", "1", ""] }
           }
         },
         {
           "name": "Get Products by Category",
           "request": {
             "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/categories/1/products/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "categories", "1", "products", ""]
-            }
+            "url": { "raw": "http://localhost:8000/api/categories/1/products/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "categories", "1", "products", ""] }
           }
         },
         {
           "name": "Create Category",
           "request": {
             "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Sports & Outdoors\",\n  \"description\": \"Equipment and gear for sports and outdoor activities\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{base_url}}/api/categories/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "categories", ""]
-            }
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"New Category\"\n}" },
+            "url": { "raw": "http://localhost:8000/api/categories/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "categories", ""] }
           }
         },
         {
           "name": "Update Category",
           "request": {
             "method": "PUT",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Electronics & Gadgets\",\n  \"description\": \"Updated description for electronics category\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{base_url}}/api/categories/1/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "categories", "1", ""]
-            }
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Updated Category\"\n}" },
+            "url": { "raw": "http://localhost:8000/api/categories/1/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "categories", "1", ""] }
           }
         },
         {
           "name": "Delete Category",
           "request": {
             "method": "DELETE",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/categories/1/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "categories", "1", ""]
-            }
+            "url": { "raw": "http://localhost:8000/api/categories/1/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "categories", "1", ""] }
           }
         }
       ]
@@ -125,88 +64,39 @@
           "name": "Get All Products",
           "request": {
             "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/products/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "products", ""]
-            }
+            "url": { "raw": "http://localhost:8000/api/products/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "products", ""] }
           }
         },
         {
           "name": "Get Product by ID",
           "request": {
             "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/products/1/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "products", "1", ""]
-            }
+            "url": { "raw": "http://localhost:8000/api/products/1/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "products", "1", ""] }
           }
         },
         {
           "name": "Create Product",
           "request": {
             "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Smart Watch\",\n  \"description\": \"Fitness tracker with heart rate monitor\",\n  \"price\": \"149.99\",\n  \"stock\": 25,\n  \"category\": 1\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{base_url}}/api/products/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "products", ""]
-            }
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"New Product\",\n  \"price\": 29.99,\n  \"description\": \"A great product\",\n  \"count\": 100,\n  \"is_active\": true,\n  \"category\": 1\n}" },
+            "url": { "raw": "http://localhost:8000/api/products/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "products", ""] }
           }
         },
         {
           "name": "Update Product",
           "request": {
             "method": "PUT",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"Wireless Headphones Pro\",\n  \"description\": \"Updated noise-cancelling headphones with 40h battery\",\n  \"price\": \"99.99\",\n  \"stock\": 45,\n  \"category\": 1\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{base_url}}/api/products/1/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "products", "1", ""]
-            }
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Updated Product\",\n  \"price\": 39.99,\n  \"description\": \"Updated description\",\n  \"count\": 50,\n  \"is_active\": true,\n  \"category\": 1\n}" },
+            "url": { "raw": "http://localhost:8000/api/products/1/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "products", "1", ""] }
           }
         },
         {
           "name": "Delete Product",
           "request": {
             "method": "DELETE",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/products/1/",
-              "host": ["{{base_url}}"],
-              "path": ["api", "products", "1", ""]
-            }
+            "url": { "raw": "http://localhost:8000/api/products/1/", "protocol": "http", "host": ["localhost"], "port": "8000", "path": ["api", "products", "1", ""] }
           }
         }
       ]
