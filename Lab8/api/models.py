@@ -8,7 +8,7 @@ class Category(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = 'categories'
+        verbose_name_plural = "categories"
 
 
 class Product(models.Model):
@@ -17,11 +17,7 @@ class Product(models.Model):
     description = models.TextField()
     count = models.IntegerField()
     is_active = models.BooleanField(default=True)
-    category = models.ForeignKey(
-        Category,
-        on_delete=models.CASCADE,
-        related_name='products'
-    )
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="products")
 
     def __str__(self):
         return self.name

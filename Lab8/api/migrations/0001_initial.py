@@ -1,12 +1,13 @@
-from django.db import migrations, models
 import django.db.models.deletion
+from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = []
+    dependencies = [
+    ]
 
     operations = [
         migrations.CreateModel(
@@ -28,11 +29,7 @@ class Migration(migrations.Migration):
                 ('description', models.TextField()),
                 ('count', models.IntegerField()),
                 ('is_active', models.BooleanField(default=True)),
-                ('category', models.ForeignKey(
-                    on_delete=django.db.models.deletion.CASCADE,
-                    related_name='products',
-                    to='api.category',
-                )),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='products', to='api.category')),
             ],
         ),
     ]
